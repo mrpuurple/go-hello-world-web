@@ -1,8 +1,9 @@
 package handlers
 
 import (
-	"github.com/mrpuurple/go-hello-world-web/pkg/render"
 	"net/http"
+
+	"github.com/mrpuurple/go-hello-world-web/pkg/render"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
