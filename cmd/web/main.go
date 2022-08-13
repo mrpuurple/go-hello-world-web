@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"github.com/mrpuurple/go-hello-world-web/pkg/render"
 )
 
 const portNumber = "8080"

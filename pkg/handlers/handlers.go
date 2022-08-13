@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/mrpuurple/go-hello-world-web/render"
+	"github.com/mrpuurple/go-hello-world-web/pkg/render"
 	"net/http"
 )
 
