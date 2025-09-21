@@ -6,13 +6,15 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/mrpuurple/go-hello-world-web/pkg/config"
+	"github.com/mrpuurple/go-hello-world-web/pkg/handlers"
+	"github.com/mrpuurple/go-hello-world-web/pkg/render"
+
 	"github.com/alexedwards/scs/v2"
-		"github.com/mrpuurple/go-hello-world-web/pkg/config"
-		"github.com/mrpuurple/go-hello-world-web/pkg/handlers"
-		"github.com/mrpuurple/go-hello-world-web/pkg/render"
 )
 
 const portNumber = ":8888"
+
 var app config.AppConfig
 var session *scs.SessionManager
 
@@ -34,7 +36,7 @@ func main() {
 	if err != nil {
 		log.Fatal("cannot create template cache")
 	}
-	
+
 	app.TemplateCache = tc
 	app.UseCache = true
 
@@ -46,7 +48,7 @@ func main() {
 	fmt.Printf("Starting application on port %s\n", portNumber)
 
 	srv := &http.Server{
-		Addr: portNumber,
+		Addr:    portNumber,
 		Handler: routes(&app),
 	}
 
@@ -54,4 +56,3 @@ func main() {
 	log.Fatal(err)
 
 }
- 
