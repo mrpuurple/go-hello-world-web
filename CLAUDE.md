@@ -48,7 +48,12 @@ This is a modular Go web application using the chi router with session managemen
   - `handlers/` - HTTP request handlers using repository pattern
   - `models/` - Data structures (TemplateData)
   - `render/` - Template rendering engine with caching
-- `templates/` - HTML templates (*.page.tmpl, *.layout.tmpl)
+- `templates/` - HTML templates (*.page.tmpl, *.layout.tmpl, *.partial.tmpl)
+- `static/` - Static assets served by the web server
+  - `css/` - Stylesheet files organized in subdirectories
+  - `images/` - Image assets including favicon
+  - `fonts/` - Font files
+  - `js/` - JavaScript files
 
 ### Key Dependencies
 
@@ -74,6 +79,16 @@ This is a modular Go web application using the chi router with session managemen
 
 Templates use Go's html/template with:
 
-- Page templates: `*.page.tmpl`
-- Layout templates: `*.layout.tmpl`
+- Page templates: `*.page.tmpl` - Main content templates (home, about)
+- Layout templates: `*.layout.tmpl` - Base layout structure
+- Partial templates: `*.partial.tmpl` - Reusable components (nav, footer)
 - Template data passed via `models.TemplateData` struct
+
+### Static Assets
+
+Static files are served from the `static/` directory and include:
+
+- CSS files with modular organization (base, components, pages, utilities)
+- Custom favicon (SVG format)
+- Font assets for typography
+- JavaScript files for client-side functionality
