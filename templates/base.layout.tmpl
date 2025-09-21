@@ -20,10 +20,14 @@
 
     {{template "nav" .}}
 
-    {{block "content" .}}
+    <main class="main-content">
+        {{block "content" .}}
 
-    {{end}}
-    
+        {{end}}
+    </main>
+
+    {{template "footer" .}}
+
     {{block "js" .}}
 
     {{end}}

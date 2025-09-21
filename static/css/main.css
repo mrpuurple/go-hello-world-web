@@ -11,6 +11,7 @@
 /* Components */
 @import url('components/navigation.css');
 @import url('components/cards.css');
+@import url('components/footer.css');
 
 /* Pages */
 @import url('pages/home.css');
@@ -33,6 +34,8 @@ html {
 body {
   background-color: var(--color-gray-100);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Focus Styles for Accessibility */
