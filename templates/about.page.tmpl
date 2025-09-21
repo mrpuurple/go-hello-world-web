@@ -1,18 +1,20 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>This is the about page</h1>
-                <p>This came from the template: {{index .StringMap "test"}}</p>
-                <p>
-                    {{if ne (index .StringMap "remote_ip") ""}}
-                        Your remote IP is {{index .StringMap "remote_ip"}}
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">This is the about page</h1>
+            <p class="text-lg text-gray-700 mb-4">Chicken tenderloin venison spare ribs, pastrami bresaola shankle short loin turkey pork loin. Shoulder ham hock pork chop sirloin, beef ribs bacon pancetta drumstick doner. Frankfurter kielbasa prosciutto, cow short ribs ground round chuck shoulder. This came from the template: {{index .StringMap "test"}}</p>
+            <div class="text-lg text-gray-700">
+                {{if ne (index .StringMap "remote_ip") ""}}
+                    {{if ne (index .StringMap "remote_ipv4") ""}}
+                        <p class="mb-2">Your remote IP is <span class="font-semibold text-blue-600">{{index .StringMap "remote_ipv4"}}</span></p>
                     {{else}}
-                        I don't know your ip address yet. Visit the <a href="/">Home page</a> so I can set it.
+                        <p class="mb-2">Your remote IP is <span class="font-semibold text-blue-600">{{index .StringMap "remote_ip"}}</span></p>
                     {{end}}
-                </p>
+                {{else}}
+                    <p>I don't know your ip address yet. Visit the <a href="/" class="text-blue-600 hover:text-blue-800 underline">Home page</a> so I can set it.</p>
+                {{end}}
             </div>
         </div>
     </div>

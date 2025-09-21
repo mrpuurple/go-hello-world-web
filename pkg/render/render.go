@@ -89,6 +89,18 @@ func CreateTemplateCache() (map[string]*template.Template, error) {
 			}
 		}
 
+		partials, err := filepath.Glob("./templates/*.partial.tmpl")
+		if err != nil {
+			return myCache, err
+		}
+
+		if len(partials) > 0 {
+			ts, err = ts.ParseGlob("./templates/*.partial.tmpl")
+			if err != nil {
+				return myCache, err
+			}
+		}
+
 		myCache[name] = ts  
 	}
 
