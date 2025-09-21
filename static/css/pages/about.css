@@ -1,0 +1,75 @@
+/* About Page Specific Styles */
+.about-header {
+  margin-bottom: var(--spacing-6);
+}
+
+.about-content {
+  margin-bottom: var(--spacing-8);
+}
+
+.about-section {
+  margin-bottom: var(--spacing-8);
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.ip-info {
+  background-color: var(--color-gray-50);
+  padding: var(--spacing-6);
+  border-radius: var(--border-radius-lg);
+  border-left: 4px solid var(--color-primary);
+  margin-top: var(--spacing-6);
+}
+
+.ip-info h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.ip-display-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.ip-display-item:last-child {
+  border-bottom: none;
+}
+
+.ip-label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.ip-value {
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: white;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-gray-200);
+}
+
+.ip-value.primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.no-ip-message {
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--color-gray-600);
+  font-style: italic;
+}
+
+.no-ip-message a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}

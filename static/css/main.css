@@ -1,0 +1,83 @@
+/*!
+ * Go Web App - Main Stylesheet
+ * Custom CSS Framework for Go Hello World Web Application
+ */
+
+/* Base Styles */
+@import url('base/reset.css');
+@import url('base/variables.css');
+@import url('base/typography.css');
+
+/* Components */
+@import url('components/navigation.css');
+@import url('components/cards.css');
+
+/* Pages */
+@import url('pages/home.css');
+@import url('pages/about.css');
+
+/* Utilities */
+@import url('utilities/layout.css');
+
+/* Custom Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-gray-100);
+  min-height: 100vh;
+}
+
+/* Focus Styles for Accessibility */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  .navbar,
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+}
