@@ -3,15 +3,9 @@ package handlers
 import (
 	"net/http"
 
-<<<<<<< HEAD
-	"github.com/mrpuurple/go-hello-world-web/pkg/config"
-	"github.com/mrpuurple/go-hello-world-web/pkg/models"
-	"github.com/mrpuurple/go-hello-world-web/pkg/render"
-=======
-	"github.com/mrpuurple/mygoapp/pkg/config"
-	"github.com/mrpuurple/mygoapp/pkg/models"
-	"github.com/mrpuurple/mygoapp/pkg/render"
->>>>>>> 888a37c (refactor)
+		"github.com/mrpuurple/go-hello-world-web/pkg/config"
+		"github.com/mrpuurple/go-hello-world-web/pkg/models"
+		"github.com/mrpuurple/go-hello-world-web/pkg/render"
 )
 
 // Repo the repository used by the handlers
@@ -34,15 +28,6 @@ func NewHandlers(r *Repository) {
 	Repo = r
 }
 
-<<<<<<< HEAD
-func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, "home.page.tmpl", &models.TemplateData{})
-}
-
-func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
-	stringMap := make(map[string]string)
-	stringMap["test"] = "Hello again!"
-=======
 // Home is the home page handler
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	remoteIP := r.RemoteAddr
@@ -61,7 +46,6 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 	stringMap["remote_ip"] = remoteIP
 
 	// send the data to the template
->>>>>>> 888a37c (refactor)
 	render.RenderTemplate(w, "about.page.tmpl", &models.TemplateData{
 		StringMap: stringMap,
 	})

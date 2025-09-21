@@ -1,4 +1,4 @@
-module github.com/mrpuurple/mygoapp
+module github.com/mrpuurple/go-hello-world-web
 
 go 1.25
 
